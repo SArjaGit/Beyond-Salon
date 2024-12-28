@@ -12,7 +12,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 @spaces.GPU
 # Define the function to transform hair color
 def transform_hair(image, color):
-    
+
     # Define the directory for uploaded images
     image_path = os.path.join(UPLOAD_DIR, "uploaded_image.jpg")
 
@@ -20,12 +20,12 @@ def transform_hair(image, color):
     image.save(image_path)
 
     print(f"Image saved to: {image_path}")
-    
+
     # Call the set_hair_color method with the image path and color
     output_path = look_maker.hair_transform(color, image_path)
 
     output_path = "output/colored_hair.png"
-    
+
     print(f"Output path: {output_path}")
 
     if output_path and os.path.exists(output_path):
@@ -36,8 +36,7 @@ def transform_hair(image, color):
         return transformed_image
     else:
         raise ValueError("Failed to generate transformed image")
-    
-#transform_hair(image, 'blue')
+
     return transformed_image
 
 
