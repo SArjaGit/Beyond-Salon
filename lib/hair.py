@@ -1,5 +1,4 @@
 from segment_anything import SamPredictor, sam_model_registry
-from huggingface_hub import hf_hub_download
 import cv2
 import numpy as np
 import torch
