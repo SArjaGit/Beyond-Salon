@@ -90,18 +90,49 @@ class HairMaskPipeline:
 
 
 def store_image_and_generate_mask(input_image_path):
+    """
+    Generates a hair mask for the given input image and stores it.
 
+    Args:
+      input_image_path (str): The file path to the input image.
+
+    Returns:
+      str: The file path to the generated hair mask image.
+
+    Example:
+      hair_mask_path = store_image_and_generate_mask('/path/to/input/image.png')
+      print(hair_mask_path)
+
+    """
+
+    # Initialize the hair mask pipeline
     hair_mask_pipeline = HairMaskPipeline()
 
+    # Generate the hair mask and store it in the specified output path
     hair_mask_path = hair_mask_pipeline.generate_hair_mask(
         image_path=input_image_path, output_mask_path='output/masks/hair_mask.png')
 
+    # Print the location of the generated hair mask
     print('Hair mask generated at', hair_mask_path)
 
+    # Return the file path to the generated hair mask
     return hair_mask_path
 
 
 def set_hair_color(color_name, input_image_path):
+    """
+    Sets the hair color of a person in an image to the specified color.
+
+    Args:
+      color_name (str): The name of the color to set the hair to.
+      input_image_path (str): The file path to the input image.
+
+    Returns:
+      str: The file path to the output image with the colored hair.
+
+    This function reads an input image, generates a hair mask, and applies the specified color to the hair region.
+    The resulting image is saved to 'output/colored_hair.png'.
+    """
 
     hair_mask_pipeline = HairMaskPipeline()
     input_image_cv = cv2.imread(input_image_path, cv2.IMREAD_UNCHANGED)
@@ -145,6 +176,34 @@ def set_hair_color(color_name, input_image_path):
 
 
 class look_maker:
+    """
+    A class used to transform the look of an image, specifically focusing on hair color.
+
+    Methods
+    -------
+    hair_transform(selected_color, image_path)
+      Changes the hair color in the given image to the selected color.
+    """
+
+    """
+    Initializes the look_maker class.
+    """
+
+    """
+    Transforms the hair color in the given image to the selected color.
+
+    Parameters
+    ----------
+    selected_color : str
+      The desired hair color to apply to the image.
+    image_path : str
+      The path to the image file where the hair color will be changed.
+
+    Returns
+    -------
+    Image
+      An image object with the hair color changed to the selected color.
+    """
     def __init__(self):
         # Initialize any attributes or parameters
         pass
