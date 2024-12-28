@@ -22,7 +22,7 @@ Beyond Salon is a web application that allows users to upload an image and selec
 ## Files
 * [Gradio_UI.ipynb](https://github.com/SArjaGit/Project-3/blob/Read-me-Branch/Gradio_UI.ipynb) - User Interface for handling the input and applying the transformation
 * [app.py](https://github.com/SArjaGit/Beyond-Salon/blob/main/app.py) - Hugging Face Spaces setup file (Gradio_UI.ipynb reconstituted to be used in Hugging Face Spaces)
-* [hair.py](https://github.com/SArjaGit/Project-3/blob/main/lib/hair.py) - Main class that creates the hair mask and applies transformation
+* [/lib/hair.py](https://github.com/SArjaGit/Project-3/blob/main/lib/hair.py) - Main class that creates the hair mask and applies transformation
 * [/lib](https://github.com/SArjaGit/Beyond-Salon/tree/main/lib) - Houses the python library files
 * [/output](https://github.com/SArjaGit/Beyond-Salon/tree/main/output) - The folder where images are outputed
 * [/uploaded_images](https://github.com/SArjaGit/Beyond-Salon/tree/main/uploaded_images) - The folder where uploaded images are stored
