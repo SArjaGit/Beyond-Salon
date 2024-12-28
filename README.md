@@ -20,7 +20,8 @@ Beyond Salon is a web application that allows users to upload an image and selec
 - Used existing models from segment_anything and diffusers
   
 ## Files
-* [Gradio_UI.ipynb](https://github.com/SArjaGit/Project-3/blob/Read-me-Branch/Gradio_UI.ipynb) - User Interface for handling the input and applying the transformation 
+* [Gradio_UI.ipynb](https://github.com/SArjaGit/Project-3/blob/Read-me-Branch/Gradio_UI.ipynb) - User Interface for handling the input and applying the transformation
+* [app.py](https://github.com/SArjaGit/Beyond-Salon/blob/main/app.py) - Hugging Face Spaces setup file (Gradio_UI.ipynb reconstituted to be used in Hugging Face Spaces)
 * [hair.py](https://github.com/SArjaGit/Project-3/blob/main/lib/hair.py) - Main class that creates the hair mask and applies transformation
 * [/lib](https://github.com/SArjaGit/Beyond-Salon/tree/main/lib) - Houses the python library files
 * [/output](https://github.com/SArjaGit/Beyond-Salon/tree/main/output) - The folder where images are outputed
@@ -45,6 +46,7 @@ Beyond Salon is a web application that allows users to upload an image and selec
 - OpenCV
 - NumPy
 - Webcolors
+- Spaces
 
 ## Local Installation
 
@@ -67,28 +69,8 @@ Beyond Salon is a web application that allows users to upload an image and selec
 
 ## Local Usage
 
-1. Run the application locally:
-    ```bash
-    python app.py
-    ```
+Run the Gradio_UI.ipynb file in VSCode or Jupyterlab
 
-2. Open your web browser and go to `http://localhost:7860` to use the application.
+## Hugging Face (Remote Usage)
 
-## Deployment
-
-To deploy the application to Hugging Face Spaces for free permanent hosting and GPU upgrades, follow these steps:
-
-1. Install the Gradio CLI:
-    ```bash
-    pip install gradio
-    ```
-
-2. Run the deploy command:
-    ```bash
-    gradio deploy
-    ```
-
-3. Follow the prompts:
-    - Enter Spaces app title: `Beyond_Salon`
-    - Enter Gradio app file: [app.py](http://_vscodecontentref_/1)
-    - Enter Spaces hardware: `t4-small`
+This code is deployed to a Hugging Face Space which can be accessed here: [https://huggingface.co/spaces/dailyinvention/beyondsalon](https://huggingface.co/spaces/dailyinvention/beyondsalon)
