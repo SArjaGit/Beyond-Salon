@@ -1,11 +1,15 @@
+import spaces
 from lib.hair import look_maker
 import gradio as gr
 from PIL import Image
 import os
+import torch
 
 UPLOAD_DIR = "uploaded_images"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 #image = "source_data/Roberta.jpg"
+
+@spaces.GPU
 # Define the function to transform hair color
 def transform_hair(image, color):
     
@@ -37,6 +41,11 @@ def transform_hair(image, color):
     return transformed_image
 
 
+print(f"Is CUDA available: {torch.cuda.is_available()}")
+# True
+print(f"CUDA device: {torch.cuda.get_device_name(torch.cuda.current_device())}")
+# Tesla T4
+
 # Create a Gradio interface
 iface = gr.Interface(
     fn=transform_hair,
@@ -53,4 +62,4 @@ iface = gr.Interface(
 
 
 # Launch the interface
-iface.launch()
+iface.launch(share=True)
