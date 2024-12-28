@@ -1,3 +1,14 @@
+---
+title: Beyond Salon
+emoji: 👀
+colorFrom: indigo
+colorTo: gray
+sdk: gradio
+sdk_version: 5.9.1
+app_file: app.py
+pinned: false
+---
+
 # Beyond Salon
 
 ## Project Objective:
@@ -12,7 +23,6 @@ Beyond Salon is a web application that allows users to upload an image and selec
 * [Gradio_UI.ipynb](https://github.com/SArjaGit/Project-3/blob/Read-me-Branch/Gradio_UI.ipynb) - User Interface for handling the input and applying the transformation 
 * [hair.py](https://github.com/SArjaGit/Project-3/blob/main/lib/hair.py) - Main class that creates the hair mask and applies transformation
 * [/lib](https://github.com/SArjaGit/Beyond-Salon/tree/main/lib) - Houses the python library files
-* [/source_data](https://github.com/SArjaGit/Beyond-Salon/tree/main/source_data) - All the source data files are stored here
 * [/output](https://github.com/SArjaGit/Beyond-Salon/tree/main/output) - The folder where images are outputed
 * [/uploaded_images](https://github.com/SArjaGit/Beyond-Salon/tree/main/uploaded_images) - The folder where uploaded images are stored
 
@@ -36,7 +46,7 @@ Beyond Salon is a web application that allows users to upload an image and selec
 - NumPy
 - Webcolors
 
-## Installation
+## Local Installation
 
 1. Clone the repository:
     ```bash
@@ -55,7 +65,7 @@ Beyond Salon is a web application that allows users to upload an image and selec
     pip install -r requirements.txt
     ```
 
-## Usage
+## Local Usage
 
 1. Run the application locally:
     ```bash
