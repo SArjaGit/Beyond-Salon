@@ -1,3 +1,14 @@
+---
+title: Beyond Salon
+emoji: 👀
+colorFrom: indigo
+colorTo: gray
+sdk: gradio
+sdk_version: 5.9.1
+app_file: app.py
+pinned: false
+---
+
 # Beyond Salon
 
 ## Project Objective:
